@@ -300,7 +300,7 @@
 
 function saveOptions() {
 	var temp = parseInt($('#temp').val());
-	var airports = parseInt($('#airport').val());
+	var airports = parseInt($('#airport').val())-1;
 
 	$.getJSON("airport.json", function(data){
 	APO = data[airports].airport;
