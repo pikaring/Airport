@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="css/common.css" type="text/css" /> 
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<title>I Love Sicily</title>
+</head>
+<body>
+<div id="top">
+<div id="header">
+</div><!-- /#header-->
+<div id="contents">
+<h1>Celsius/Fahrenheit</h1>
+<form>
+<select id="temp" size="2">
+	<option value="0" selected>&#8451;</option>
+	<option value="1">&#8457;</option>
+</select>
+<h1>Airport</h1>
+<select id="airport" size="4">
+<option value="1">NEW CHITOSE</option>
+<option value="2">FUKUOKA</option>
+<option value="3">HIROSHIMA</option>
+<option value="4">HANEDA</option>
+<option value="5">OSAKA</option>
+<option value="6">NIIGATA</option>
+<option value="7">KANSAI</option>
+<option value="8">KOMATSU</option>
+<option value="9">CHUBU INTERNATIONAL</option>
+<option value="10">NARITA</option>
+<option value="11">NAHA</option>
+<option value="12">SENDAI</option>
+<option value="13">ASAHIKAWA</option>
+<option value="14">OBIHIRO</option>
+<option value="15">AKITA</option>
+<option value="16">YAMAGATA</option>
+<option value="17">YAMAGUCHI UBE</option>
+<option value="18">RISHIRI</option>
+<option value="19">Okushiri,jp</option>
+<option value="20">NAKASHIBETSU</option>
+<option value="21">MONBETSU</option>
+<option value="22">MEMANBETSU</option>
+<option value="23">AOMORI</option>
+<option value="24">HANAMAKI</option>
+<option value="25">OODATE NOSHIRO</option>
+<option value="26">SHOUNAI</option>
+<option value="27">FUKUSHIMA</option>
+<option value="28">Oshima</option>
+<option value="29">NIIJIMA</option>
+<option value="30">Kouzushima</option>
+<option value="31">MIYAKEJIMA</option>
+<option value="32">Hachijojima</option>
+<option value="33">sado-shi</option>
+<option value="34">MATSUMOTO</option>
+<option value="35">shizuoka</option>
+<option value="36">toyama</option>
+<option value="37">noto</option>
+<option value="38">fukui</option>
+<option value="39">koube</option>
+<option value="40">nankishirahama</option>
+<option value="41">tottori</option>
+<option value="42">oki</option>
+<option value="43">izumo</option>
+<option value="44">iwami</option>
+<option value="45">okayama</option>
+<option value="46">saga-shi</option>
+<option value="47">tsushima</option>
+<option value="48">fukue</option>
+<option value="49">iki-shi</option>
+<option value="50">tanegashima</option>
+<option value="51">yakushima</option>
+<option value="52">amami</option>
+<option value="53">kikai</option>
+<option value="54">tokunoshima</option>
+<option value="55">okinoerabu</option>
+<option value="56">yoron</option>
+<option value="57">awakuni</option>
+<option value="58">kumejima</option>
+<option value="59">kerama</option>
+<option value="60">minamidaitoh</option>
+<option value="61">kitadaito</option>
+<option value="62">miyako</option>
+<option value="63">Ishigaki</option>
+<option value="64">SHAHJALAL INTÅfL</option>
+<option value="65">BAIYUN INTÅfL</option>
+<option value="66">CHANGCHUN LONGJIA</option>
+<option value="67">CHONGQING JIANGBEI INTÅfL</option>
+<option value="68">CHENGDU SHUANGLIU INTÅfL</option>
+<option value="69">DALIAN ZHOUSHUIZI</option>
+<option value="70">HANGZHOU XIAOSHAN INTÅfL</option>
+<option value="71">HONG KONG</option>
+<option value="72">NANCHANG CHANGBEI INTÅfL</option>
+<option value="73">KUNMING WUJIABA INTÅfL</option>
+<option value="74">LANZHOU ZHONGCHUAN</option>
+<option value="75">LIANYUNGANG BAITABU</option>
+<option value="76">NINGBO LISHE INTÅfL</option>
+<option value="77">NANJING LUKOU INTÅfL</option>
+<option value="78">NANNING WUXU INTÅfL</option>
+<option value="79">NANTONG</option>
+<option value="80">CAPITAL</option>
+<option value="81">PUDONG</option>
+<option value="82">SHENYANG TAOXIAN INTÅfL</option>
+<option value="83">XIÅfAN XIANYANG INTÅfL</option>
+<option value="84">SUZHOU</option>
+<option value="85">QINGDAO LIUTING INTÅfL</option>
+<option value="86">TIANJIN BINHAI INTÅfL</option>
+<option value="87">YAIYUAN WUSU</option>
+<option value="88">WENZHOU YONGQIANG</option>
+<option value="89">WUHAN TIANHE INTÅfL</option>
+<option value="90">wuxi</option>
+<option value="91">SARDAR VALLABHAI PATEL IINTÅfL</option>
+<option value="92">HAL BANGALORE</option>
+<option value="93">NETAJI SUBHAS CHANDRA BOSE</option>
+<option value="94">COIMBATORE</option>
+<option value="95">COCHIN INTÅfL</option>
+<option value="96">INDIRA GANDHI INTÅfL</option>
+<option value="97">HYDERABAD</option>
+<option value="98">CHENNAI INTÅfL</option>
+<option value="99">PUNE INTÅfL</option>
+<option value="100">Hang Nadim</option>
+<option value="101">Soekarno-Hatta International</option>
+<option value="102">NGURAH RAI</option>
+<option value="103">ACHMAD YANI INTÅfL</option>
+<option value="104">JUANDA INTÅfL</option>
+<option value="105">INCHEON INTÅfL</option>
+<option value="106">KIMHAE</option>
+<option value="107">SULTAN AZLAN SHAH</option>
+<option value="108">SENAI INTÅfL</option>
+<option value="109">KUCHING INTÅfL</option>
+<option value="110">KUALA LUMPUR INTÅfL</option>
+<option value="111">BATU BEREBDAM MELAKA INTÅfL</option>
+<option value="112">PENANG INTÅfL</option>
+<option value="113">YANGON INTÅfL</option>
+<option value="114">BENAZIR BHUTTO INTÅfL</option>
+<option value="115">JINNAH INTÅfL</option>
+<option value="116">LAHORE INTÅfL</option>
+<option value="117">MACTAN-CEBU INTÅfL</option>
+<option value="118">NINOY AQUINO INTÅfL</option>
+<option value="119">SUBIC BAY</option>
+<option value="120">CHANGI</option>
+<option value="121">BANDAANAYAKE</option>
+<option value="122">HSINCHU</option>
+<option value="123">KAOHSIUNG INTÅfL</option>
+<option value="124">TAINAN</option>
+<option value="125">TAOYUAN INTÅfL</option>
+<option value="126">Songshan</option>
+<option value="127">TAICHUNG</option>
+<option value="128">SUVANARBHUMI INTÅfL</option>
+<option value="129">CHIANG MAI INTÅfL</option>
+<option value="130">Hanoi International</option>
+<option value="131">TANSONNHAT INTÅfL</option>
+<option value="132">ADELAIDE INTÅfL</option>
+<option value="133">BRISBANE INTÅfL</option>
+<option value="134">MELBOURNE INTÅfL</option>
+<option value="135">PERTH</option>
+<option value="136">KINGSFORD SMITH(MASCOT)</option>
+<option value="137">AUCKLAND INTÅfL</option>
+<option value="138">CHRISTCHURCH INTÅfL</option>
+<option value="139">HASTINGS</option>
+<option value="140">WELLINGTON INTÅfL</option>
+<option value="141">MIRABEL</option>
+<option value="142">MCDONALD CARTIER INTÅfL</option>
+<option value="143">TORONTO CITY CENTRE</option>
+<option value="144">PIERRE ELLIOTT TRUDEAU</option>
+<option value="145">VANCOUVER INTÅfL</option>
+<option value="146">LESTER B. PEARSON INTÅfL</option>
+<option value="147">ALLENTOWN BETHLEHEM EASTON</option>
+<option value="148">HARTSFIELD ATLANTA INTÅfL</option>
+<option value="149">LOGAN INTÅfL</option>
+<option value="150">CLEVELAND HOPKINS INTÅfL</option>
+<option value="151">LOVE FIELD</option>
+<option value="152">NATIONAL</option>
+<option value="153">DENVER INTÅfL</option>
+<option value="154">CITY AIRPORT</option>
+<option value="155">DALLAS/FORTWORTH INTÅfL</option>
+<option value="156">WAYNE COUNTY</option>
+<option value="157">Newark Liberty</option>
+<option value="158">HONOLULU</option>
+<option value="159">HOBBY</option>
+<option value="160">WASHINGTON DULLES INTÅfL</option>
+<option value="161">INTERCONTINENTAL</option>
+<option value="162">INDIANAPOLIS INTÅfL</option>
+<option value="163">J.F.KENNEDY INTÅfL</option>
+<option value="164">LOS ANGELES INTÅfL</option>
+<option value="165">LA GUARDIA</option>
+<option value="166">MIDWAY</option>
+<option value="167">MIAMI INTÅfL</option>
+<option value="168">NONNEAPOLIS ST. PAUL INTÅfL</option>
+<option value="169">OÅfHARE INTÅfL</option>
+<option value="170">PORTLAND INTÅfL</option>
+<option value="171">PHILADELPHIA INTÅfL</option>
+<option value="172">SKY HARBOR INTÅfL</option>
+<option value="173">PITTSBURGH INTÅfL</option>
+<option value="174">SAN DIEGO INTÅfL</option>
+<option value="175">SEATTLE-TACOMA INTÅfL</option>
+<option value="176">SAN FRANCISCO INTÅfL</option>
+<option value="177">HANCOCK INTÅfL</option>
+<option value="178">AEROPARQUE JORGE NEWBERY</option>
+<option value="179">MINISTRO PISTARINI</option>
+<option value="180">RIO DE JANEIRO INTÅfL</option>
+<option value="181">GUARULHOS INTÅfL</option>
+<option value="182">EDUARDO GOMES INTÅfL</option>
+<option value="183">VIRACOPOS</option>
+<option value="184">PHNOM PENH INTÅfL</option>
+<option value="185">MAXICO CITY INTÅfL</option>
+<option value="186">JORGE CHAVEZ INTÅfL</option>
+<option value="187">LUIS MUNOZ MARIN INTÅfL</option>
+<option value="188">SIMON BOLIVAR</option>
+<option value="189">GRAZ</option>
+<option value="190">INNSBRUK</option>
+<option value="191">LINZ</option>
+<option value="192">VIENNA INTÅfL</option>
+<option value="193">BRUSSELS NATIONAL</option>
+<option value="194">PRAGUE INTÅfL</option>
+<option value="195">BILLUND</option>
+<option value="196">COPENHAGEN</option>
+<option value="197">HELSINKI-VANTAAN</option>
+<option value="198">CHARLES DE GAULLE</option>
+<option value="199">SAINT EXUPERY</option>
+<option value="200">MULHOUSE</option>
+<option value="201">ORLY</option>
+<option value="202">TOULOUSE BLAGNAC INTÅfL</option>
+<option value="203">BREMEN</option>
+<option value="204">COLOGNE/BONN</option>
+<option value="205">RHEINE-RUHR</option>
+<option value="206">FRANKFURT INTÅfL</option>
+<option value="207">HANOVER</option>
+<option value="208">HAMBURG</option>
+<option value="209">FRANZ JOSEF STRAUSS</option>
+<option value="210">NUERMBERG</option>
+<option value="211">Stuttgart</option>
+<option value="212">berlin</option>
+<option value="213">SCHWERIN PARCHIM</option>
+<option value="214">TEGEL</option>
+<option value="215">ATHINAI</option>
+<option value="216">LISZT FERENC INTÅfL</option>
+<option value="217">DUBLIN</option>
+<option value="218">LEONARDO DA VINCI(FIUMICINO)</option>
+<option value="219">LINATE</option>
+<option value="220">MALPENSA</option>
+<option value="221">venice</option>
+<option value="222">FINDEL</option>
+<option value="223">AMSTERDAM-SCHIPHOL</option>
+<option value="224">GARDENMOEN</option>
+<option value="225">FREDERIC CHOPIN</option>
+<option value="226">LISBON</option>
+<option value="227">PORTO</option>
+<option value="228">DOMODEDOVO</option>
+<option value="229">SHEREMETYEVO</option>
+<option value="230">LJUBLJANA(BRNIK)</option>
+<option value="231">BARCELONA EL PRAT</option>
+<option value="232">BARAJAS</option>
+<option value="233">Stockholm Arlanda</option>
+<option value="234">BROMMA</option>
+<option value="235">Gothenburg-Landvetter</option>
+<option value="236">STURUP</option>
+<option value="237">Basel-Mulhouse</option>
+<option value="238">GENEVA COINTRIN</option>
+<option value="239">ZURICH</option>
+<option value="240">NELFAST INTÅfL</option>
+<option value="241">BIRMINGHAM INTÅfL</option>
+<option value="242">GLASGOW</option>
+<option value="243">GATWICK</option>
+<option value="244">HEATHROW</option>
+<option value="245">MANCHESTER</option>
+<option value="246">NEWCASTLE INTÅfL</option>
+<option value="247">NAVOI</option>
+<option value="248">BAHRAIN INTÅfL</option>
+<option value="249">MEHRABAD</option>
+<option value="250">BEN GURION</option>
+<option value="251">KUWAIT INTÅfL</option>
+<option value="252">BEIRUT INTÅfL</option>
+<option value="253">KING ABDULAZIZ INTÅfL</option>
+<option value="254">ABU DHABI INTÅfL</option>
+<option value="255">DUBAI INTÅfl</option>
+<option value="256">CAIRO INTÅfL</option>
+<option value="257">Murtala Muhammed</option>
+<option value="258">CAPE TOWN INTÅfL</option>
+<option value="259">TAMBO INTÅfL</option>
+</select>
+<p><input type="submit" id="b-save" value="save"></input></p>
+<p><input type="submit" id="b-cancel" value="cancel"></input></p>
+</form>
+
+</div><!-- /#contents-->
+<div id="footer">
+</div><!-- /#footer-->
+</div><!-- /#top-->
+
+<script>
+
+function saveOptions() {
+	var temp = parseInt($('#temp').val());
+	var sicily = parseInt($('#sicily').val());
+	var local = parseInt($('#local').val());
+	var sendValue =[temp, sicily, local];
+<!--alert(sendValue);-->	
+	return sendValue;
+}
+
+$().ready(function() 
+	{
+	$("#b-cancel").click(function() 
+		{
+		console.log("Canceling");
+		document.location = "pebblejs://close";
+	});
+	$("#b-save").click(function() {
+		console.log("Save");
+		var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(saveOptions()));
+		document.location = location;
+	});
+});
+</script>
+</body>
+</html>
